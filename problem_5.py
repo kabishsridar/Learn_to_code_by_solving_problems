@@ -1,11 +1,10 @@
-sequence = input("Enter the sequence: ")
-
-loc = 1
-'''ball is in the left cup (1) at starting
+print('''ball is in the left cup (1) in beginning
 A Swap the left and middle cups
 B Swap the middle and right cups
 C Swap the left and right cups
-'''
+''')
+sequence = input("Enter the sequence: ")
+loc = 1
 for i in sequence.upper():
     if i == 'A' and loc == 1:
         loc = 2
