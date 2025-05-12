@@ -1,7 +1,6 @@
 cards = 52
 deck = []
 
-# Read 52 cards into the deck
 for i in range(cards):
     deck.append(input("card: "))
 
@@ -23,8 +22,8 @@ def no_high(card_list):
 
 for i in range(cards):
     card = deck[i]
-    points = 0  # Reset points for current card
-    remaining = cards - i - 1  # Cards left in the deck after the current one
+    points = 0 
+    remaining = cards - i - 1
 
     # Check if the current card is a high card and whether scoring conditions are met
     if card == 'jack' and remaining >= 1 and no_high(deck[i+1:i+2]):
@@ -38,8 +37,7 @@ for i in range(cards):
 
     if points > 0:
         print(f"player {player} scored {points} point(s).")
-    
-    # Alternate players and update scores
+
     if player == 'A':
         score_a = score_a + points
         player = 'B'
@@ -47,6 +45,5 @@ for i in range(cards):
         score_b = score_b + points
         player = 'A'
 
-# Print final scores
 print(f"player A: {score_a} point(s).")
 print(f"player B: {score_b} point(s).")
