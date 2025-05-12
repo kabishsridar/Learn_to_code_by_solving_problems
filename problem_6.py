@@ -1,4 +1,4 @@
-n = int(input()) #no. of seats
+seats = int(input()) #no. of seats
 yesterday = input() # checking whether seat is occupied or not c is occupied seat and . is empty seat
 today = input()
 occupied = 0
