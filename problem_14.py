@@ -10,10 +10,10 @@ score_b = 0
 player = 'A'
 
 # Returns True if no high cards (jack, queen, king, ace) are in the given list
-def no_high(lst):
-    if 'jack' in lst:
+def no_high(card_list):
+    if 'jack' in card_list:
         return False
-    if 'queen' in lst:
+    if 'queen' in card_list:
         return False
     if 'king' in lst:
         return False
