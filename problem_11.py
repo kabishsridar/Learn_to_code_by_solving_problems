@@ -1,6 +1,5 @@
 n = int(input(" Enter the number of villages (at least 3): "))
 
-
 if n < 3:
     print(" You need at least 3 villages to calculate neighborhoods.")
     exit()
@@ -23,4 +22,4 @@ for i in range(1, n - 1):  # exclude the first and last village
     if size < min_size:
         min_size = size
 
-print(f"\n✅ The smallest neighborhood size is: {min_size:.1f}")
+print(f"\n The smallest neighborhood size is: {min_size:.1f}")
