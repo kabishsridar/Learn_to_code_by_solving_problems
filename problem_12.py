@@ -1,4 +1,5 @@
 cost = [12, 10, 7, 5]
+# update the above variable 
 
 for i in range(10):
     tcost = int(input("Trip cost: "))
