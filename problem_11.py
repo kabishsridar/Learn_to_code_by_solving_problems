@@ -16,9 +16,10 @@ positions.sort()
 min_size = float('inf')
 
 for i in range(1, n - 1):  # exclude the first and last village
-    left = positions[i - 1]
-    right = positions[i + 1]
-    size = (right - left) / 2
+    previous= positions[i - 1]
+    next = positions[i + 1]
+    size = (next - previous) / 2
+
     if size < min_size:
         min_size = size
 
