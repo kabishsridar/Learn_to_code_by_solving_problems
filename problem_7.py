@@ -1,4 +1,4 @@
-mb = int(input("Enter amount of mb: "))
+mb = int(input("Enter amount of mb provided per month: "))
 months = int(input("Enter the number of months: "))
 
 excess = 0
