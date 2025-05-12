@@ -15,9 +15,9 @@ def no_high(card_list):
         return False
     if 'queen' in card_list:
         return False
-    if 'king' in lst:
+    if 'king' in card_list:
         return False
-    if 'ace' in lst:
+    if 'ace' in card_list:
         return False
     return True
 
