@@ -1,53 +1,89 @@
-def reverse_mapping(word_count):
-    count_to_words = {}
-    for word, count in word_count.items():
-        if count not in count_to_words:
-            count_to_words[count] = [word]
+def read_input():
+    num_cases = int(input("Enter number of test cases: "))
+    all_cases = []
+
+    for case in range(num_cases):
+        print(f"\nTest case {case + 1}:")
+        while True:
+            line = input("Enter number of words and k (separated by space): ").strip()
+            if line != "":
+                break
+
+        parts = line.split()
+        m = int(parts[0])
+        k = int(parts[1])
+
+        words = []
+        for i in range(m):
+            word = input(f"Enter word {i + 1}: ").strip()
+            words.append(word)
+
+        all_cases.append((k, words))
+
+    return all_cases
+
+def count_words(words):
+    freq = {}
+    for word in words:
+        if word in freq:
+            freq[word] += 1
         else:
-            count_to_words[count].append(word)
-    return count_to_words
+            freq[word] = 1
+    return freq
 
-def ordinal_suffix(number):
-    str_num = str(number)
-    if str_num[-1] == '1' and str_num[-2:] != '11':
-        return str_num + 'st'
-    elif str_num[-1] == '2' and str_num[-2:] != '12':
-        return str_num + 'nd'
-    elif str_num[-1] == '3' and str_num[-2:] != '13':
-        return str_num + 'rd'
-    else:
-        return str_num + 'th'
+def sort_desc(numbers):
+    n = len(numbers)
+    for i in range(n):
+        for j in range(i + 1, n):
+            if numbers[j] > numbers[i]:
+                numbers[i], numbers[j] = numbers[j], numbers[i]
+    return numbers
 
-def get_kth_most_common(count_to_words, k):
-    sorted_counts = sorted(count_to_words.keys(), reverse=True)
-    if k <= len(sorted_counts):
-        return count_to_words[sorted_counts[k - 1]]
-    else:
+def sort_words(words):
+    n = len(words)
+    for i in range(n):
+        for j in range(i + 1, n):
+            if words[j] < words[i]:
+                words[i], words[j] = words[j], words[i]
+    return words
+
+def find_kth_words(freq, k):
+    freq_list = []
+    for value in freq.values():
+        if value not in freq_list:
+            freq_list.append(value)
+
+    freq_list = sort_desc(freq_list)
+
+    if k > len(freq_list):
         return []
 
-num_datasets = int(input("Enter the number of datasets you want to process: "))
+    target = freq_list[k - 1]
+    result = []
 
-for _ in range(num_datasets):
+    for word in freq:
+        if freq[word] == target:
+            result.append(word)
 
-    m, k = map(int, input("Enter m (number of words) and k (the rank of the word you want): ").split())
-    print(f"Note: You need to enter {m} words, and the program will return the {k}-th most common word(s).")
+    return sort_words(result)
 
-    word_count = {}
-    print("Enter the words (one word per line):")
-    for _ in range(m):
-        word = input().strip()
-        word_count[word] = word_count.get(word, 0) + 1
+def get_ordinal(k):
+    return str(k) + "th"
 
-    count_to_words = reverse_mapping(word_count)
+def solve():
+    cases = read_input()
 
-    ordinal = ordinal_suffix(k)
+    for index, (k, words) in enumerate(cases):
+        freq = count_words(words)
+        result = find_kth_words(freq, k)
 
-    words_at_k = get_kth_most_common(count_to_words, k)
+        print()
+        print(get_ordinal(k) + " most common word(s):")
+        if len(result) == 0:
+            print(f"No words found for {get_ordinal(k)} most common.")
+        else:
+            for word in result:
+                print(word)
+        print()
 
-    print(f"\n{ordinal} most common word(s):")
-    if words_at_k:
-        for word in sorted(words_at_k):
-            print(word)
-    else:
-        print(f"No words found for the {ordinal} most common.")
-    print()
+solve()
