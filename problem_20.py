@@ -1,35 +1,29 @@
-def find_special_pairs():
-    infile = open("citystate.in", "r")
-    n = int(infile.readline().strip()) 
-    cities = []
-    
-    for _ in range(n):
-        cities.append(infile.readline().strip().split())
-    infile.close()
-    prefix_to_state_count = {}
+filein = open('citystate.in', 'r')
+fileout = open('citystate.out', 'w')
 
-    for city, state in cities:
-        prefix = city[:2]  
-        if prefix not in prefix_to_state_count:
-            prefix_to_state_count[prefix] = {}
-        if state not in prefix_to_state_count[prefix]:
-            prefix_to_state_count[prefix][state] = 0
-        prefix_to_state_count[prefix][state] += 1
+n = int(filein.readline())
+pair_counts = {}
 
-    special_pair_count = 0
+for i in range(n):
+    parts = filein.readline().split()
+    city = parts[0][:2]
+    state = parts[1]
 
-    for city, state in cities:
-        prefix = city[:2]
-       
-        if prefix in prefix_to_state_count:
-            for other_state, count in prefix_to_state_count[prefix].items():
-                if other_state != state:
-                    special_pair_count += count
+    if city != state:
+        key = city + state
+        if key not in pair_counts:
+            pair_counts[key] = 1
+        else:
+            pair_counts[key] += 1
 
-    special_pair_count //= 2
+total = 0
 
-    outfile = open("citystate.out", "w")
-    outfile.write(str(special_pair_count))
-    outfile.close()
+for key in pair_counts:
+    reverse_key = key[2:] + key[:2]
+    if reverse_key in pair_counts:
+        total += pair_counts[key] * pair_counts[reverse_key]
 
-find_special_pairs()
+fileout.write(str(total // 2) + '\n')
+
+filein.close()
+fileout.close()
