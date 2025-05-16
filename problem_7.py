@@ -1,3 +1,4 @@
+print("Data Plan:")
 mbpm = int(input("Enter amount of mb provided per month: ")) # get amount of mb provided per month (mbpm indicates mb per month)
 months = int(input("Enter the number of months: ")) # get number of months
 
