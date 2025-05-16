@@ -1,22 +1,22 @@
 cards = 52
 deck = []
 
-for i in range(cards):
-    deck.append(input("card: "))
+for card_name in range(cards):
+    deck.append(input("card: ")) # we need to enter every 52 cards as asked in the question
 
 score_a = 0
 score_b = 0
 player = 'A'
 
 # Returns True if no high cards (jack, queen, king, ace) are in the given list
-def no_high(card_list):
-    if 'jack' in card_list:
+def no_high_cards(card_list):
+    if 'jack' or 'JACK' in card_list:
         return False
-    if 'queen' in card_list:
+    if 'queen' or 'QUEEN' in card_list:
         return False
-    if 'king' in card_list:
+    if 'king' or 'KING' in card_list:
         return False
-    if 'ace' in card_list:
+    if 'ace' or 'ACE' in card_list:
         return False
     return True
 
@@ -26,13 +26,13 @@ for i in range(cards):
     remaining = cards - i - 1
 
     # Check if the current card is a high card and whether scoring conditions are met
-    if card == 'jack' and remaining >= 1 and no_high(deck[i+1:i+2]):
+    if card == 'jack' or 'JACK' and remaining >= 1 and no_high_cards(deck[i+1:i+2]):
         points = 1
-    elif card == 'queen' and remaining >= 2 and no_high(deck[i+1:i+3]):
+    elif card == 'queen' or 'QUEEN' and remaining >= 2 and no_high_cards(deck[i+1:i+3]):
         points = 2
-    elif card == 'king' and remaining >= 3 and no_high(deck[i+1:i+4]):
+    elif card == 'king' or 'KING' and remaining >= 3 and no_high_cards(deck[i+1:i+4]):
         points = 3
-    elif card == 'ace' and remaining >= 4 and no_high(deck[i+1:i+5]):
+    elif card == 'ace' or 'ACE' and remaining >= 4 and no_high_cards(deck[i+1:i+5]):
         points = 4
 
     if points > 0:
