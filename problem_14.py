@@ -1,49 +1,57 @@
-cards = 52
-deck = []
+TOTAL_CARDS = 52
+HIGH_CARDS = ['jack', 'queen', 'king', 'ace']
 
-for card_name in range(cards):
-    deck.append(input("card: ")) # we need to enter every 52 cards as asked in the question
+# Read 52 cards from input
+deck = [input().strip().lower() for _ in range(TOTAL_CARDS)]
 
 score_a = 0
 score_b = 0
-player = 'A'
+current_player = 'A'
 
-# Returns True if no high cards (jack, queen, king, ace) are in the given list
-def no_high_cards(card_list):
-    if 'jack' or 'JACK' in card_list:
-        return False
-    if 'queen' or 'QUEEN' in card_list:
-        return False
-    if 'king' or 'KING' in card_list:
-        return False
-    if 'ace' or 'ACE' in card_list:
-        return False
+# Helper function to check if the next few cards contain any high cards
+def no_high_cards(cards_to_check):
+    for card in cards_to_check:
+        if card in HIGH_CARDS:
+            return False  # Return False immediately if any high card is found
     return True
 
-for i in range(cards):
+# Go through each card in the deck
+for i in range(TOTAL_CARDS):
     card = deck[i]
-    points = 0 
-    remaining = cards - i - 1
+    points = 0
+    cards_remaining = TOTAL_CARDS - i - 1  # Cards left after current one
 
-    # Check if the current card is a high card and whether scoring conditions are met
-    if card == 'jack' or 'JACK' and remaining >= 1 and no_high_cards(deck[i+1:i+2]):
-        points = 1
-    elif card == 'queen' or 'QUEEN' and remaining >= 2 and no_high_cards(deck[i+1:i+3]):
-        points = 2
-    elif card == 'king' or 'KING' and remaining >= 3 and no_high_cards(deck[i+1:i+4]):
-        points = 3
-    elif card == 'ace' or 'ACE' and remaining >= 4 and no_high_cards(deck[i+1:i+5]):
-        points = 4
+    # Scoring rules for each high card
+    if card == 'jack' and cards_remaining >= 1:
+        next_cards = deck[i + 1 : i + 2]
+        if no_high_cards(next_cards):
+            points = 1
+
+    elif card == 'queen' and cards_remaining >= 2:
+        next_cards = deck[i + 1 : i + 3]
+        if no_high_cards(next_cards):
+            points = 2
+
+    elif card == 'king' and cards_remaining >= 3:
+        next_cards = deck[i + 1 : i + 4]
+        if no_high_cards(next_cards):
+            points = 3
+
+    elif card == 'ace' and cards_remaining >= 4:
+        next_cards = deck[i + 1 : i + 5]
+        if no_high_cards(next_cards):
+            points = 4
 
     if points > 0:
-        print(f"player {player} scored {points} point(s).")
+        print(f"Player {current_player} scored {points} point(s).")
 
-    if player == 'A':
-        score_a = score_a + points
-        player = 'B'
+    # Update score and switch player
+    if current_player == 'A':
+        score_a += points
+        current_player = 'B'
     else:
-        score_b = score_b + points
-        player = 'A'
+        score_b += points
+        current_player = 'A'
 
-print(f"player A: {score_a} point(s).")
-print(f"player B: {score_b} point(s).")
+print(f"Player A: {score_a} point(s).")
+print(f"Player B: {score_b} point(s).")
