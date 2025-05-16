@@ -1,3 +1,4 @@
+#first get all the input from user for all type of points
 Apples_3 = int(input("Enter number of successful three-point shots for the Apples: ")) 
 Apples_2 = int(input("Enter number of successful two-point shots for the Apples: "))
 Apples_1 = int(input("Enter number of successful one-point free throw for the Apples: "))
@@ -9,9 +10,9 @@ Bananas_1 = int(input("Enter number of successful one-point free throw for the B
 Apples_total = Apples_3 *3 + Apples_2 * 2 + Apples_1 * 1 #apples_3 is multiplied by 3 because it is a three point shot same as for rest of those 
 Bananas_total = Bananas_3*3 + Bananas_2 * 2 + Bananas_1 * 1
 
-if Apples_total > Bananas_total:
+if Apples_total > Bananas_total:  # checking the condition to find who has more points
     print("Apples Won")
 elif Bananas_total> Apples_total:
     print("Bananas won")
 else:
-    print("Tie")
+    print("Tie")  # if both are in the same point it returns tie, it returns only when both the if and elif character is false
