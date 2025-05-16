@@ -3,8 +3,8 @@ A Swap the left and middle cups
 B Swap the middle and right cups
 C Swap the left and right cups
 ''')
-sequence = input("Enter the sequence: ")
-loc = 1
+sequence = input("Enter the sequence(like ABC or BCA by using only A,B,C): ")
+loc = 1 # as it is mentioned that the ball is in first cup so loc means ball location
 for i in sequence.upper():
     if i == 'A' and loc == 1:
         loc = 2
