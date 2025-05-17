@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 high_cards = ['jack', 'queen', 'king', 'ace']
 high_card_points = {'jack': 1, 'queen': 2, 'king': 3, 'ace': 4}
 
