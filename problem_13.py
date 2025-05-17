@@ -1,5 +1,5 @@
-line = input("Enter number of franchisees and number of days (separated by a space): ")
-lst = line.split()
+input_data = input("Enter number of franchisees and number of days (separated by a space): ")
+lst = input_data.split()
 f = int(lst[0])  # Number of franchisees (column)
 d = int(lst[1])  # Number of days (row)
 
@@ -20,7 +20,7 @@ for day_index in range(d):
             grid.append(row)
             break
 
-bonus = 0 
+bonus = 0
 
 for day_index in range(d):
     day = grid[day_index]
