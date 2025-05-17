@@ -1,0 +1,23 @@
+BALL AND CUP CHALLENGE GAME
+
+INPUTS:
+enter the sequence of swaps as ABABCAC
+
+SAMPLE INPUT:
+Enter the sequence(like ABC or BCA by using only A,B,C): ABCABAC
+
+SAMPLE OUTPUT:
+The ball is in cup  1
+
+STEPS TO WRITE THE CODE:
+1. first instruct the users about this PROGRAMME as displaying the uses of every buttons and how they swap
+2. get an input from user for sequence of buttons like ABC or even the single variable
+3. set loc as 1 as it is mentioned that the ball is in the first cup in the beginning
+4. use for loop to process the swaps as
+ If swap is 'A' and the ball is in cup 1, move it to cup 2.
+ If swap is 'A' and the ball is in cup 2, move it back to cup 1.
+ If swap is 'B' and the ball is in cup 2, move it to cup 3.
+ If swap is 'B' and the ball is in cup 3, move it back to cup 2.
+ If swap is 'C' and the ball is in cup 1, move it to cup 3.
+ If swap is 'C' and the ball is in cup 3, move it back to cup 1.
+ 5. print the final ball locaation after swaps
