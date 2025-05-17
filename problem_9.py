@@ -1,12 +1,13 @@
 print("SONGS PLAYLIST APP")
 songs = 'ABCDE' # default order of song playlist
-
-while True:
-    Nbutton = int(input("Enter button number between 1 to 4: ")) # gets an input as informing to select the button
-    print("""Button1 to move first song to end
+print("normal sequence of playlist: ABCDE")
+print("""Button1 to move first song to end
           Button2 to move last song to beginning
           Button3 to swap first two songs
           Button4 to play the playlist""")
+while True:
+    
+    Nbutton = int(input("Enter button number between 1 to 4: ")) # gets an input as informing to select the button
 
     if Nbutton == 4:
         break  # Exit and play the playlist
