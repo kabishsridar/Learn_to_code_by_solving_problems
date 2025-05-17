@@ -1,0 +1,27 @@
+DATA PLAN PROGRAMME
+
+INPUTS:
+1. Enter mb provided per month
+2. Enter number of months
+3. Enter amount of mb use in particular month
+
+SAMPLE INPUT:
+Data Plan:
+Enter amount of mb provided per month: 50
+Enter the number of months: 4
+Enter amount of mb used in month 1: 25
+Enter amount of mb used in month 2: 50
+Enter amount of mb used in month 3: 35
+Enter amount of mb used in month 4: 50
+
+SAMPLE OUTPUT:
+The amount of mb for the next month:  90
+
+STEPS TO WRITE THE CODE:
+1. print the heading first as DATA PLAN
+2. get the input from user for amount of mb provided per month
+3. get the input from user for nummber of months
+4. use for loop and loop through each month
+5. get the input from the user for amount of mb used on the particular month
+6. the excess mb should be excess + mb per month - used mb as the excess mb is the amount of mb which is not used on the particular month, mbpm is the allotted mb per month, used is the amount of mb that is used
+7. print the mb that is allotted for next month 
