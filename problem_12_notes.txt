@@ -1,0 +1,21 @@
+SCHOOL TRIP PROGRAMME
+SAMPLE INPUTS:
+Trip cost($) between 50 and 50000: 2500
+Total number of students (4 to 2000): 4
+Proportion of students per year (e.g. 0.25 0.25 0.25 0.25): 0.25 0.20 0.50 0.05
+
+SAMPLE OUTPUTS:
+YES - More funds needed.
+
+STEPS TO WRITE THE CODE:
+1. assign cost as a list with 12, 10, 7, 5 indicating 1st year student = $12 and seond year as $10 and so on
+2. use for loop for 10 trips
+3. get the input from user for trip cost and store as tcost in integer form
+4. get the input from user for number of students as num_studets in integer form
+5. get the input from user for proportion of students per year as proportion_input and split it 
+6. use for loop and loop through the length of proportion which means number of students (0.4 0.2 0.3 0.1) convert those to float format
+7. make students_per_year as empty list
+8. loop through length of proportion_input and convert the number of students * proportion to integer and append them to students_per_year
+9. loop through length of students_per_year and multiply students by cost per year and store it as total_raised
+10. check if at least half of the cost of trip is covered
+11. if covered print yes otherwise print no.
