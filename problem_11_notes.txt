@@ -1,0 +1,20 @@
+VILLAGE NEIGHBOURHOOD PROGRAMME
+SAMPLE INPUT:
+Enter the number of villages (between 3 to 100): 4
+Position of village 1: -100
+Position of village 2: -50
+Position of village 3: 20
+Position of village 4: 0
+
+SAMPLE OUTPUT:
+ The smallest neighborhood size is: 35.0
+
+STEPS TO WRITE THE CODE:
+1. get the input for number of villages and store it as n
+2. if n is lesser than 3 print You need at least 3 villages to calculate neighborhoods. and it should exit from the programme
+3. collect village positions one by one and store them in a list
+4. sort the village positions
+5. calculate neighborhood sizes by iteratig over middle villages (excluding first and last vilages)
+6. Compute the neighborhood size as: size = (next - previous) / 2
+7. If the computed size is smaller than min_size, update min_size.
+8. print the smallest neighbourhood
