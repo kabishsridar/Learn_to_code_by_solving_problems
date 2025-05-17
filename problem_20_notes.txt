@@ -1,0 +1,12 @@
+STEPS TO WRITE THE CODE:
+1. open the file citystatein.txt in read mode and citystateout.txt in write mode
+2. initiate pair_counts as empty dictionary
+2. read the first line which is the number of cities and store it as n in integer format
+3. use for loop and loop through each city using n and split city and state, then get first two characters of city, then store the second item in first line as state
+4. check for the condition if first two characters of city is not equal to state then set pair_counts[key] as 1
+5. else add 1 to pair_counts
+6. initiate total as 0
+7. use for loop and loop through all the keys in dictionary and generate the reverse_key byswapping city and state abbreviation
+8. if the reverse_key in the dictionary pair_counts add pair_counts[key] * pair_counts[reverse_key] to total
+9. as the loop will count twice we use total //2 and get unique pairs and add a new line and convert it to string
+9. write the final computed result to citystateout.txt
