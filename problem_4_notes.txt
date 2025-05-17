@@ -1,0 +1,36 @@
+TELEMARKETERS PROGRAMME
+INPUTS:
+1. enter first integers, second integer, third integer, fourth integer 
+
+SAMPLE INPUT 1:
+First Integer: 8
+Second Integer: 5
+Third Integer: 5
+Fourth Integer: 9
+
+SAMPLE OUTPUT 1:
+ignore
+
+SAMPLE INPUT 2:
+First Integer: 8
+Second Integer: 6
+Third Integer: 5
+Fourth Integer: 9
+
+SAMPLE OUTPUT 2:
+answer
+
+FOR THE SECOND PROGRAMME:
+SAMPLE INPUT:
+enter four number with seperating by spaces: 8 5 5 9
+
+SAMPLE OUTPUT:
+ignore
+
+STEPS TO WRITE THE CODE:
+1. get the input from user for first integer of mobile number, second integer upto fourth integer one by one 
+2. display the numbers in same line for example 8 5 5 9
+3. check the condition as mentioned in the question for that the first integer should be either 8 or 9 and the second and third integer should be same and the last fourth integer should be either 8 or 9
+4. check these with if - else condition as if the above conditions are true it should print ignore and if it is false it should be print answer
+
+(or) the second program is user friendly as we can enter all four integers in same line with the help of list as we split the list and check by each indexes
