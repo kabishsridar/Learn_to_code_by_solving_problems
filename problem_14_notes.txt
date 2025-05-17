@@ -1,0 +1,80 @@
+SAMPLE INPUT:
+Welcome to the Card Game!
+There are 52 cards in the deck, and we need you to enter the name or number of each card one by one.
+You can enter the cards as: 1, 2, 3, ..., 10, jack, queen, king, ace.
+Enter card 1: 1    
+Enter card 2: 2
+Enter card 3: 3
+Enter card 4: 4
+Enter card 5: 5
+Enter card 6: 6
+Enter card 7: 7
+Enter card 8: 8
+Enter card 9: 9
+Enter card 10: 10
+Enter card 11: jack
+Enter card 12: king
+Enter card 13: queen
+Enter card 14: ace
+Enter card 15: 2
+Enter card 16: 3
+Enter card 17: 4
+Enter card 18: 5
+Enter card 19: 6
+Enter card 20: 7
+Enter card 21: 8
+Enter card 22: 9
+Enter card 23: 10
+Enter card 24: jack
+Enter card 25: king
+Enter card 26: queen
+Enter card 27: ace
+Enter card 28: 2
+Enter card 29: 3
+Enter card 30: 4
+Enter card 31: 5
+Enter card 32: 6
+Enter card 33: 7
+Enter card 34: 8
+Enter card 35: 9
+Enter card 36: 10
+Enter card 37: jack
+Enter card 38: king
+Enter card 39: queen
+Enter card 40: ace
+Enter card 41: 2
+Enter card 42: 3
+Enter card 43: 4
+Enter card 44: 5
+Enter card 45: 6
+Enter card 46: 7
+Enter card 47: 8
+Enter card 48: 9
+Enter card 49: 10
+Enter card 50: jack
+Enter card 51: king
+Enter card 52: queen
+
+SAMPLE OUTPUT:
+Game starts now!
+Player B scored 4 point(s) by playing ace.
+Player A scored 4 point(s) by playing ace.
+Player B scored 4 point(s) by playing ace.
+
+Game over!
+Final scores:
+Player A: 4 point(s).
+Player B: 8 point(s).
+Player B wins!
+
+STEPS TO WRITE THE CODE:
+1. assign NUM_CARDS as 52
+2. define a function to check for high card in the list as it should return false if high card is present in the list and true if there are no high cards in the list
+3. get the cards as instructed from the question to get the input line by line for 52 cards using for loop and append it to list deck
+4. check if the card is jack and remaining(NUM_CARDS - i -1) is less than 1 and no_high card is from the deck[i +1 to i + 2] then point should be 1
+5. check if the card is queen and remaining(NUM_CARDS - i -1) is less than 2 and no_high card is from the deck[i +1 to i + 3] then point should be 2
+6. check if the card is king and remaining(NUM_CARDS - i -1) is less than 3 and no_high card is from the deck[i +1 to i + 4] then point should be 3
+7. check if the card is ace and remaining(NUM_CARDS - i -1) is less than 4 and no_high card is from the deck[i +1 to i + 5] then point should be 4
+8. if points are greater than 0 the input should show the player's points
+9. check for the score_a and score_b if score_a is greater print playerA wins! or if score_b is greater then print player b wins!
+10. else print tie
