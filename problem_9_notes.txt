@@ -1,0 +1,30 @@
+SAMPLE INPUT:
+SONGS PLAYLIST APP
+normal sequence of playlist: ABCDE
+Button1 to move first song to end
+          Button2 to move last song to beginning
+          Button3 to swap first two songs
+          Button4 to play the playlist
+Enter button number between 1 to 4: 1
+Enter number of times to press the button (1 to 10): 2
+Enter button number between 1 to 4: 3
+Enter number of times to press the button (1 to 10): 1
+Enter button number between 1 to 4: 2
+Enter number of times to press the button (1 to 10): 1
+Enter button number between 1 to 4: 4
+
+SAMPLE OUTPUT:
+Final Playlist: C E A B D
+
+STEPS TO WRITE THE CODE:
+1. Display SONG PLAYLIST APP
+2. instruct the user about the app buttons and initial sequence
+3. use while loop and ask button number (swap) from the user and swap acordingly
+4. if button is 4 then it should break the loop and pint the playlist
+5. if button is less than 1 or more than 4 it shouold display an error message as Invalid button. Please enter a number from 1 to 4.
+6. then get the number of times the button should be pressed from the user
+7. then use for loop for number of times it is pressed
+8. in the for loop if button is 1 then songs[1:] + songs[0] should be songs
+9. if the button is 2 then songs[-1] + songs[:-1] should be changed as songs
+10. if the button is 3 then songs[1] + songs[0] + songs[2:] should be changed as songs
+11. print the final playlist order(sequence)
