@@ -1,0 +1,15 @@
+SAMPLE INPUT:
+enter the secret encoded sentence: ipi lipikepe yopoupu
+
+SAMPLE OUTPUT:
+decoded sentence:  i like you
+
+STEPS TO WRITE THE CODE:
+1. get the secret encoded sentence from the user and store as secret
+2. assign the vowels both in small and capital letters by naming the variable as vowels
+3. assign i as 0 and decoded as empty string
+4. use while loop untill the i is lesser than the length of secret 
+5. add current character to decoded
+6. if current character is a vowel then it should skip next two characters so i = i+ 3
+7. else it should be the consonant then it should move only one index as i = i + 1
+8. print the decode sentence
