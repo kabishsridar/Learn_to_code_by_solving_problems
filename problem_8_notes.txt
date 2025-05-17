@@ -1,0 +1,26 @@
+SLOT MACHINES PROGRAMME
+
+SAMPLE INPUTS:
+Enter the number of quarters Martha has(1 yo 1000): 250
+Enter the number of times that the slot machine has been played since it last paid
+FIRST machine: 34
+SECOND machine: 90
+THIRD machine: 10
+
+SAMPLE OUTPUTS:
+Martha plays 521 times before she has 1 quarters.
+
+STEPS TO WRITE THE CODE:
+1. get the number of quarters(tikets) martha has(between 1 to 1000)
+2. get the number of times the slot machine has been played one by one
+3. use while loop untill she has one or more than one quarters
+4. reduce 1 quarter for every loop
+5. use if codition to check machine is 0 or 1 or 2 or 3 as she plays in the order 0, 1, 2, 3 so the loop should b in the same order
+6. if machine is 0 then first_machine_count should increase by 1 as she plays in the first machine then the first_machine_count increases
+7. then after increasing the first_machine_count if it is 35 then it should be set as 0 because after 35th time it should start as new 
+8. for every 35th time she use the first machine she should get extra 35 quarters by quarter +=35
+9. the same concept for other two machines but if the second_machine_count is 100 then 60 quarters should be added
+10. if the third_machine_count is 10 then 9 quarters should be added
+11. number of plays (plays) should increase for every plays so plays += 1 and machine += 1
+12. if machine is 3 by adding then it should start again as 0 as there are only 3 machines(0, 1, 2)
+13. print number of times martha can play before she has 1 quarter left
