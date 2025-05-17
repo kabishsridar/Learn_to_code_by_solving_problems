@@ -1,8 +1,8 @@
 wordin = open('wordin.txt', 'r') # opening the file in read mode 
 wordout= open('wordout.txt', 'w') # opening the file in write mode
 # the first line of file contains the number of words and the maximum number of characters per line
-lines = wordin.readline().split() # read first line alone
-max_char_per_line = int(lines[1])
+input_data = wordin.readline().split() # read first line alone
+max_char_per_line = int(input_data[1])
 wordlst = wordin.readline().split() # read the second line
 
 line = ''
