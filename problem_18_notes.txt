@@ -1,0 +1,25 @@
+SAMPLE INPUT:
+The no. of email addresses(1 - 100,000): 4
+Enter email address: kabishsridar6+hiiamsldh@gmail.com
+Enter email address: kabishsridar6+fjdfnjvf@gmail.com
+Enter email address: kabishsridar6@gmail.com
+Enter email address: sridarkabish@gmail.com
+
+SAMPLE OUTPUT:
+The no. of unique email address in which you have entered is
+2
+
+STEPS TO WRITE THE CODE:
+1. define a funtion clean(address)
+2. convert it to lowercase for consistency 
+3. find the index of at and store as at and with use of it, seperate it as before_at and after_at
+4. find the index of + and store it as plus if plus not equal to -1 then before_at should be before at and after plus we can write as before_at[:plus]
+5. initiate cleaned_before_at as empty string
+6. use while loop untill i is less than length of before_at if the nth character of before_at is not a '.' then then character should be added to cleaned_before_at
+7. add i +1 to move to next character
+8. assign cleaned_before_at + after_at as cleaned and return cleaned in this function
+9. get the number of email addresses from the user and store as n
+10. initiate addresses as empty set 
+11. use for loop and loop through each email addresses asking the email address one by one
+12. use clean(address) and add this to empty set
+13. printThe no. of unique email address in which you have entered is and length of addresses should be printed below the line
