@@ -1,0 +1,17 @@
+WORD_COUNT PROGRAMME
+INPUTS:
+1. enter the sentence to count words in it
+
+SAMPLE INPUT:
+enter a sentence(do not use spaces before and after the sentence): i am kabish
+
+SAMPLE OUTPUT:
+number of words: 3
+
+STEPS TO WRITE THE CODE:
+1.get a sentence from the user to count the number of words in it
+2.define a function named word_count()
+3. use the count function and count the spaces in the sentence
+4. the number of words will be the number of spaces + 1 as we leave only one space between two words
+5. print number of words in sentence
+6. call the function to execute
