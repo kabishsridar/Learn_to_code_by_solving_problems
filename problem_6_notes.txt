@@ -1,0 +1,21 @@
+PARKING SPACES PROGRAMME
+
+INPUTS:
+1. enter the sequence of spaces occupied by a car by both yesterday and today one by one
+
+SAMPLE INPUTS:
+Enter total no. of parking spaces(1 to 100): 4
+Enter the sequence: C.CC
+Enter the sequence: ..C.
+
+SAMPLE OUTPUTS:
+number of spaces occupied on both days:  1
+
+STEPS TO WRITE THE CODE:
+1. get the total number of parking spaces (1 to 100) in integer format
+2. instruct about the programme as c for occupied spaces and . for not occupied
+3. get the input from the user for the parking space sequence yesterday
+4. get the input from the user for the parking space sequence today
+5. use for loop for number of times as the number of parking spaces yesterday 
+6. here now we will take spaces one by one as if the space should be either c or C in both yeserday and today then it should be counted named as occupied 
+7. print spaces which are occupied by both yesterday and today
