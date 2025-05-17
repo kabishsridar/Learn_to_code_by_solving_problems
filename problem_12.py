@@ -1,4 +1,4 @@
-cost = [12, 10, 7, 5]
+cost = [12, 10, 7, 5] # 1st year = $12, 2nd year = $10, 3rd year = $7, 4th year = $5
 
 # Loop for 10 trips
 for i in range(10):
@@ -29,3 +29,4 @@ for i in range(10):
     print(f"Total raised: ${total_raised}, Half of trip cost: ${tcost / 2:.2f}")
     
     print("YES - More funds needed." if total_raised / 2 < tcost else "NO - Enough funds raised.\n")
+    break
