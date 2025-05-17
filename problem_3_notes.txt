@@ -1,0 +1,22 @@
+WINNING TEAM
+INPUTS:
+1. the points scored by apples in three-point shot, two-point shot and one-point shot
+2. the points scored by bananas in three-point shot, two-point shot and one-point shot
+
+SAMPLE INPUT:
+Enter number of successful three-point shots for the Apples: 5
+Enter number of successful two-point shots for the Apples: 2
+Enter number of successful one-point free throw for the Apples: 6
+Enter number of successful three-point shots for the Bananas: 8
+Enter number of successful two-point shots for the Bananas: 2
+Enter number of successful one-point free throw for the Banana: 2
+
+SAMPLE OUTPUT:
+Bananas won
+
+STEPS TO WRITE THE CODE:
+1. get input from the user for each three point shots, two point shots, one point shots scored by apples and bananas one by one in integer format and store it
+2. make total score of both seperately as three point shots should be multiplied by three, two point shots with 2 and one point shot is left simple as anything multiplied by one is one
+3. check the condition as if bananas total is greater than apples total the output should be bananas won
+4. check the same if apples total is greater than bananas total then the output should be as apples won
+5. if something else than these two condition it should print tie
