@@ -1,0 +1,23 @@
+BAKER BONUS.
+
+SAMPLE INPUT:
+Enter number of franchisees and number of days (separated by a space): 3 2
+Enter sales for Day 1 (space-separated for 3 franchisees): 65 91 39
+Enter sales for Day 2 (space-separated for 3 franchisees): 38 65 78
+
+SAMPLE OUTPUT:
+Total bonus awarded: 36
+
+STEPS TO WRITE THE CODE:
+1.get the number of franchises and number of days from the user and store it as input_data
+2. convert it to a list and store it as lst
+3. store the 0th index as f for franchisees and 1st index as d for days
+4. Loop through the number of days, get the input from user for sales data for each franchisee
+5. check the user enters exactly the required number of values, otherwise, request re-entry
+6. Convert the entered values to integers and store them as a row in grid 
+7. repeat the loop for every days
+8. Loop through each day's sales, calculate the total sales for that day
+9. Check if the day's total sales are divisible by 13; if true, add total // 13 to bonus
+10. Loop through each franchisee's sales, summing across all days
+11. Check if the franchisee's total sales are divisible by 13; if true, add total // 13 to bonus
+12. Print the final bonus amount awarded to franchisees.  
