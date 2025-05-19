@@ -2,11 +2,11 @@ wordin = open('wordin.txt', 'r') # opening the file in read mode
 wordout= open('wordout.txt', 'w') # opening the file in write mode
 # the first line of file contains the number of words and the maximum number of characters per line
 input_data = wordin.readline().split() # read first line alone
-max_char_per_line = int(input_data[1])
+max_char_per_line = int(input_data[1]) # convert it into integer
 wordlst = wordin.readline().split() # read the second line
 
-line = ''
-char_on_line = 0
+line = '' # initiating line as an empty string
+char_on_line = 0 # initiate char_on_line as 0
 
 for i in wordlst:
     if char_on_line + len(i) <= max_char_per_line: # if current word can fit in line, add it to the line with a space
