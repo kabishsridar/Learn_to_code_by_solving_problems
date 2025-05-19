@@ -11,7 +11,7 @@ pos.sort() # sorting in ascending order
 
 for i in range(n): # track our index where we are at
     for j in range(i + 1, n): # Iterate through all possible second positions in the sorted list
-        first_two_diff = pos[j] - pos[i]
+        first_two_diff = pos[j] - pos[i] 
         low = pos[j] +first_two_diff
         high = pos[j] + first_two_diff * 2
 
