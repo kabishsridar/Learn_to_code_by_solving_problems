@@ -1,0 +1,19 @@
+SAMPLE INPUT:
+5
+5
+20
+40
+60
+80
+
+SAMPLE OUTPUT:
+1953
+
+STEPS TO WRITE THE CODE:
+1. Open the file skidesignin.txt in read mode and skidesignout.txt in write mode
+2. read first line for number of heights and store as n 
+3. read next n lies and convert into integer adn append to the list
+4. loop through possible height ranges from to 83 and set hish as low + 17
+5. iterate through the heights, if h is beyond the range, modify it as cost += (low - h) ** 2 if h < low and cost += (h - high) ** 2 if h > high
+6. Update the minimum cost if the newly calculated cost is lower.
+7. Write the minimum cost to the output file
