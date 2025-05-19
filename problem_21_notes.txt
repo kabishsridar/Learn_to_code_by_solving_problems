@@ -1,0 +1,16 @@
+SAMPLE INPUT:
+3
+1 5
+2 6
+4 9
+
+SAMPLE OUTPUT:
+8
+
+STEPS TO WRITE THE CODE:
+1. open both the files lifeguardsin.txt in read mode and lifeguardsout.txt in write mode
+2. read the first line to get number of lifeguards, and next line to get the start and end times of each lifeguards shift
+3. define a function num_covered(interval, fired) and use a set to store all unique time covered by the remaining lifeguards except fired.
+4. loop through all intervals and return the length of set (covered time duration)
+5. fire each lifeguards one by one and loop throuh index from 0 to n-1, using num_covered function fire each lifeguards temporarily and find the maximum time covered
+6. write the maximum covered found to the file lifeguardsout.txt
