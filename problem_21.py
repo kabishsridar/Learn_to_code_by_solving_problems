@@ -1,5 +1,5 @@
-def num_covered(intervals, fired):
-    covered = set()
+def num_covered(intervals, fired): # define a function named num_covered(intervals, fired).
+    covered = set() # initiate covered as an empty set
     for i in range(len(intervals)): # Loop through all lifeguards' intervals
         if  i != fired: # Skip the lifeguard who is fired
             interval = intervals[i]
