@@ -3,14 +3,14 @@ filein = open('baseballin.txt', 'r') # opening file in read mode
 fileout = open('baseballout.txt', 'w') # opening file in write mode
 
 n = int(filein.readline()) # reading first line to find number of cows 
-pos = []
+pos = [] # initiating pos as an empty list
 for i in range(n):  # loop through each cows
     pos.append(int(filein.readline())) # append the first line to pos
 
-pos.sort()
+pos.sort() # sorting in ascending order
 
 for i in range(n): # track our index where we are at
-    for j in range(i + 1, n): # 
+    for j in range(i + 1, n): # Iterate through all possible second positions in the sorted list
         first_two_diff = pos[j] - pos[i]
         low = pos[j] +first_two_diff
         high = pos[j] + first_two_diff * 2
