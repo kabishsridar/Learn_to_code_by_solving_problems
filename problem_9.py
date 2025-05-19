@@ -1,11 +1,13 @@
-print("SONGS PLAYLIST APP")
+print("SONGS PLAYLIST APP") # displaying the user about this programme
 songs = 'ABCDE' # default order of song playlist
 print("normal sequence of playlist: ABCDE")
-print("""Button1 to move first song to end
-          Button2 to move last song to beginning
-          Button3 to swap first two songs
-          Button4 to play the playlist""")
-while True:
+print("""
+    Button1 to move first song to end
+    Button2 to move last song to beginning
+    Button3 to swap first two songs
+    Button4 to play the playlist
+    """)
+while True: # loops untill the button number is 4
     
     Nbutton = int(input("Enter button number between 1 to 4: ")) # gets an input as informing to select the button
 
@@ -22,7 +24,7 @@ while True:
         print("Invalid number of presses. Must be between 1 and 10.")
         continue
 
-    for i in range(Ntimes):
+    for i in range(Ntimes): # it will loop the number of times the button is pressed
         if Nbutton == 1:
             songs = songs[1:] + songs[0]  # Move first song to the end
         elif Nbutton == 2:
