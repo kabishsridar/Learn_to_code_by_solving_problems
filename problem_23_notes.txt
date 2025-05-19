@@ -1,0 +1,28 @@
+SAMPLE INPUT:
+5
+2
+5
+8
+11
+14
+
+SAMPLE OUTPUT:
+6
+
+STEPS TO WRITE THE CODE:
+1. Import bisect_left and bisect_right from the bisect module for binary search.  
+2. Open baseballin.txt for reading and baseballout.txt for writing.  
+3. Read the first line to get the number of cows (n).  
+4. Initialize an empty list pos to store cow positions.  
+5. Read the next n lines, convert each to an integer, and append to pos.  
+6. Sort pos in ascending order
+7. Initialize total = 0 to store the number of valid triples (x, y, z).  
+8. Iterate through each cow position i as the first cow.  
+9. Iterate through each cow position j as the second cow, ensuring j > i.  
+10. Compute the distance between the first two cows as first_two_diff = pos[j] - pos[i].  
+11. Set the valid range for the third cow: low = pos[j] + first_two_diff and high = pos[j] + first_two_diff * 2.  
+12.Use bisect_left(pos, low) to find the smallest valid index for z.  
+13. Use bisect_right(pos, high) to find the largest valid index for z.  
+14. Compute the number of valid z values as right - left and add it to total.    
+15. Write the final count of valid triples to baseballout.txt.  
+16. Close both files
