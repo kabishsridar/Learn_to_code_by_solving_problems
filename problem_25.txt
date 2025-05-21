@@ -1,0 +1,22 @@
+SAMPLE INPUT:
+Enter the length of ribbon and number of paint strokes (separated by a space between 1 and 100000): 10 3
+Enter starting and ending position of painting stroke separated by a space: 2 5
+Enter starting and ending position of painting stroke separated by a space: 3 7
+Enter starting and ending position of painting stroke separated by a space: 8 10
+
+SAMPLE OUTPUT:
+3 7
+
+STEPS TO WRITE THE CODE:
+1. get the input from the user for length of ribbon and number of paint strokes
+2. split them and store as list named ns
+3. Convert and store the first value as n (ribbon length).
+4. Convert and store the second value as stroke (number of paint strokes).
+5. Initialize ribbon and create a list ribbon with n elements, all set to 0 (representing purple).
+6. loop through Each Paint Stroke**  
+7. Read the user input for the start and end positions of the stroke.
+8. Convert these positions into integers.
+9. Iterate through the range from start to end position (as mentioned, not including ending position) and update the ribbon color to 1 (blue).
+10. Count the number of 0s in ribbon (purple sections).
+11. Count the number of 1s in ribbon (blue sections).
+12. Display the Output Print the counts of purple and blue sections.
