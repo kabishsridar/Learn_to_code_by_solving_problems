@@ -1,14 +1,14 @@
 # A converted to B
 # B converted to BA
 # got the idea through comments to track only letter counts and not the letters
-presses = int(input())
+presses = int(input()) # number of presses
 a_count = 1
 b_count = 0
 
-for changes in range(presses):
+for changes in range(presses): # loop through each presses
     new_a_count = b_count
     new_b_count = a_count + b_count
     
     a_count = new_a_count
     b_count = new_b_count
-print(a_count, b_count)
+print(a_count, b_count) # display the output
