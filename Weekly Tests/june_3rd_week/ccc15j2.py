@@ -1,10 +1,10 @@
 happy = ":-)"
 sad = ":-("
-prompt = input()
-happy_count = prompt.count(happy)
-sad_count = prompt.count(sad)
+prompt = input() # get input
+happy_count = prompt.count(happy) # count number of happy
+sad_count = prompt.count(sad) # count number of sad
 
-if happy_count > sad_count:
+if happy_count > sad_count: # return the result as which is greater
     print("happy")
 elif happy_count < sad_count:
     print("sad")

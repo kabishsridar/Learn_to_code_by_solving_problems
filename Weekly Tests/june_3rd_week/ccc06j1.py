@@ -1,5 +1,5 @@
 total = 0
-burger = int(input())
+burger = int(input()) # get input for type of food and add the respective calories to the total
 if burger == 1:
     total += 461
 elif burger == 2:
@@ -47,4 +47,4 @@ elif dessert == 4:
 else:
     print("Enter valid integer")
 
-print(f"Your total Calorie count is {total}.")
+print(f"Your total Calorie count is {total}.") # display the total calories
