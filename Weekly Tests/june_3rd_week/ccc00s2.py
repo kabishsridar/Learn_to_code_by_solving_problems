@@ -1,35 +1,36 @@
-n = int(input())
+n = int(input()) # Get the number of initial streams
 streams = []
 
-for i in range(n):
-    streams.append(input())
-while True:
-    op = int(input())
-    if op == 77:
-        break
-    
-    elif op == 99:
-        stream_num = int(input())
-        percent_left = int(input())
-        
-        idx = stream_num - 1
-        
-        flow = streams[idx]
-        
-        left_flow = flow * percent_left / 100
-        right_flow = flow - left_flow
-        
-        streams = streams[:idx] + [left_flow, right_flow] + streams[idx+1:]
-    
-    elif op == 88:
-        stream_num = int(input())
-        
-        idx = stream_num - 1
-        
-        new_flow = streams[idx] + streams[idx + 1]
-        
-        streams = streams[:idx] + [new_flow] + streams[idx + 2:]
+for flow in range(n): # the flows
+    streams.append(int(input()))  
 
-rounded_flows = [round(flow) for flow in streams]
+while True: # loop until the input is 77 (exit)
+    operation = int(input())  # get the input
+    if operation == 77: # break for 77
+        break  
+    
+    stream_index = int(input()) - 1  # this will be the actual index values
 
-print(len(rounded_flows), *rounded_flows)
+    if operation == 99:  # split
+        split_percentage = int(input()) # get split %
+        flow_left = streams[stream_index] * split_percentage // 100 # calculate amount of stream flows left
+
+        flow_right = streams[stream_index] - flow_left # in 100 units, if 40 goes to left, the remaining 60 goes to right
+        streams.insert(stream_index + 1, flow_right)
+        streams[stream_index] = flow_left
+
+    elif operation == 88:  # Merge
+        merged_flow = streams[stream_index] + streams.pop(stream_index + 1)
+        streams[stream_index] = merged_flow
+
+rounded_streams = []
+for flow in streams:  # loop through each stream and round values
+    rounded_streams.append(round(flow))  
+
+
+stream_count = len(rounded_streams)  
+print(stream_count)
+
+for flow in rounded_streams:
+    print(flow)
+
