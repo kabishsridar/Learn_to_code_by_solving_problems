@@ -6,7 +6,7 @@ tone = input().strip()
 
 # Split the input using '|' as a delimiter
 measures = tone.split('|')
-
+# ['AB', 'BA']
 a_minor = ['A', 'D', 'E']
 c_major = ['C', 'F', 'G']
 

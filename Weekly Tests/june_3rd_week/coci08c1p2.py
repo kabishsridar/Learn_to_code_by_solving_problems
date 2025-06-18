@@ -1,6 +1,6 @@
 n = int(input()) # number of questions
 
-answers = input() # correct sequence
+answers = input() # sequence
 
 # repeating guess pattern
 adrian_sequence = ['A', 'B', 'C']
@@ -14,7 +14,7 @@ adrian = 0
 bruno = 0
 goran = 0
 
-for i in range(n): # loop through each question and compare guesses to correct answers
+for i in range(n):  # loop through each question
     if answers[i] == adrian_sequence[a_index]:
         adrian += 1
     if answers[i] == bruno_sequence[b_index]:
@@ -22,11 +22,17 @@ for i in range(n): # loop through each question and compare guesses to correct a
     if answers[i] == goran_sequence[g_index]:
         goran += 1
 
-    # Move to the next character in the guess pattern (loop around when necessary)
-    a_index = (a_index + 1) % len(adrian_sequence)
-    b_index = (b_index + 1) % len(bruno_sequence)
-    g_index = (g_index + 1) % len(goran_sequence)
+    a_index += 1
+    if a_index == len(adrian_sequence):
+        a_index = 0
 
+    b_index += 1
+    if b_index == len(bruno_sequence):
+        b_index = 0
+
+    g_index += 1
+    if g_index == len(goran_sequence):
+        g_index = 0
 # finding the maximum score
 max_score = max(adrian, bruno, goran)
 

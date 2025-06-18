@@ -5,7 +5,7 @@
 n = int(input()) # get input for number of lines
 t_count = 0
 s_count = 0
-for i in range(n): # loop for each lines and prompt the input and count number of t and s in the line
+for lines in range(n): # loop for each lines and prompt the input and count number of t and s in the line
     prompt = input()
     for char in prompt.lower():
         if char == "t":
