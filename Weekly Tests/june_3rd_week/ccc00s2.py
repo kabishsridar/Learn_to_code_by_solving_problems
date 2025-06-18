@@ -1,7 +1,7 @@
 n = int(input()) # Get the number of initial streams
 streams = []
 
-for flow in range(n): # the flows
+for flow in range(n): # loop through the flows
     streams.append(int(input()))  
 
 while True: # loop until the input is 77 (exit)
