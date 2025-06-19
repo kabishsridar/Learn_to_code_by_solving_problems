@@ -1,4 +1,4 @@
-# ameriCanadian
+# AmeriCanadian
 result = []
 try: # for EOFError
     while True:

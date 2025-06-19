@@ -1,5 +1,4 @@
 # distinct years
-
 # should check the next num is distinct using for loop
 def check_distinct(year): # function to check whether it is distinct
     checked = []
@@ -16,6 +15,7 @@ def next_distinct_year(year):
         if check_distinct(str(year_int)): # checking thorugh converting to string
             print(year_int)
             break # after checked completely, breaks
+
 if __name__ == "__main__": # should start at first
     year = input() # get the year
     next_distinct_year(year) # calling the function

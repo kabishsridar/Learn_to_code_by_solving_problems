@@ -1,4 +1,4 @@
-cards = [2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 11] * 4
+deck = [2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 11] * 4
 # print(cards)
 n = int(input()) # number of cards drawn so far
 drawn_sum = 0
@@ -8,7 +8,7 @@ for card in range(n):
     drawn_sum += drew
     drawn_cards.append(drew) # the cards drew will be stored in dran_cards
     
-deck = cards.copy() # copying the original so that we can remove the cards from deck
+# deck = cards.copy() # copying the original so that we can remove the cards from deck
 for card in drawn_cards:
     deck.remove(card)
 

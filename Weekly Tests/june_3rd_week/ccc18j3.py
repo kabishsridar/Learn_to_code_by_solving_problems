@@ -1,3 +1,4 @@
+# Are We There Yet
 distances = input() # get input from user
 
 def add_distances(distances):
@@ -8,11 +9,12 @@ def add_distances(distances):
     
     result = [0] # initialise the result list to 0 to track the sums
     for i in range(len(distance_lst)): # loop through each distances given
-        total = result[-1] + distance_lst[i] # sums the last digit with the current digit
+        total = result[-1] + distance_lst[i] # sums the last digit of result with the current digit in distance_lst
         result.append(total) # append the total calculated to the result list
 
-    for i in range(len(result)):# finding the difference between each pair of cumulative distances
-        for j in range(len(result)):
+    for i in range(len(result)):# finding the difference between each pair of distances
+        for j in range(len(result)): # if i is 0, then with i=0, the j will be as 0, 1, 2, etc 
+            # with the nested loop, we are able to display both horizontal and vertial results
             if result[i] > result[j]: # displaying the difference between both
                 dif = result[i] - result[j]
             else:

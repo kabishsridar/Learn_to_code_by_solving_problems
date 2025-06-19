@@ -10,7 +10,7 @@ days = 0
 current_infected = n
 total_infected = n
 
-while total_infected <= p:
+while total_infected <= p: # breaks if total_infected is equal to total people have disease
     days += 1 # increment number of days for each loop
     current_infected = current_infected * r # calculate infected persons
     total_infected += current_infected # add to the total_infected

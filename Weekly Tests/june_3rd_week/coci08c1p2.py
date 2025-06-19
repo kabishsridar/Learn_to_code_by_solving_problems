@@ -23,7 +23,7 @@ for i in range(n):  # loop through each question
         goran += 1
 
     a_index += 1
-    if a_index == len(adrian_sequence):
+    if a_index == len(adrian_sequence): # after one complete sequence, reset index to 0
         a_index = 0
 
     b_index += 1
