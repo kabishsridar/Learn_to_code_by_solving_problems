@@ -1,0 +1,29 @@
+SAMPLE INPUT:
+Enter the number of boxes (1 to 100): 4
+Enter heights(in by leaving a space between the boxes): 1 2 5 4
+Enter heights(in by leaving a space between the boxes): 2 5 9 4
+Enter heights(in by leaving a space between the boxes): 2 5 9 6
+Enter heights(in by leaving a space between the boxes): 1 5 9 3
+
+SAMPLE OUTPUT:
+NO
+
+STEPS TO WRITE THE CODE:
+1. get input from user for number of boxes (1 to 100)
+2. Store the input in a variable and validate that it is within the acceptable range  
+3. Create an empty list called boxes to store the heights of action figures in each box  
+4. Use a loop to iterate through each box and collect the heights from user input  
+5. Prompt the user to enter a line that starts with the number of action figures followed by their heights  
+6. Convert the user input into a list and remove the first value, keeping only the heights  
+7. Convert the heights from text to numbers and store them in the list of boxes  
+8. Define a function to check if the heights in each box are arranged in non-decreasing order  
+9. If any box does not follow the non-decreasing order, display the message no and stop execution  
+10. Extract the first and last heights of each box and store them in a separate list  
+11. Sort the list of first and last heights to prepare for the final condition check  
+12. Define a function to verify whether the first heights follow an increasing order condition  
+13. Iterate through the sorted list to check if the starting height of each box is greater than or equal to the maximum height of the previous box  
+14. If the heights meet both conditions, display the message yes to indicate the boxes can be organized  
+15. If the heights fail the condition, display the message no to indicate the arrangement is not possible  
+16. Ensure that the steps and conditions are implemented in an efficient manner to handle large inputs properly  
+17. Use separate functions for different checks to keep the code modular and easy to update  
+18. Test the code with different inputs to confirm accuracy before finalizing  

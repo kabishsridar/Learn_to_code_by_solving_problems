@@ -1,17 +1,19 @@
 fin = open('Weekly Tests//june_3rd_week//crossroadin.txt', 'r') # open the input file
 fout = open('crossroadout.txt', 'w') # create or open the file
 
+n = fin.readline()
+obs = int(n)
 crossing = 0
 observations = []
 
-for i in range(n):
+for i in range(obs):
     line = fin.readline().split() # read file and split it
     cow_id = int(line[0]) # the first index is cow_id and the next index is the side 
     side = int(line[1])
     observations.append([cow_id, side]) # append them to observations list
 
 for cow_id in range(1, 11): # loop through each cows (10 cows)
-    last_side = None
+    last_side = None # previous_side
     for observation in observations: # loop through observations
         if observation[0] == cow_id: # checking whether the particular observation is current cow_id
             current_side = observation[1] # stores the side of the cow

@@ -1,0 +1,28 @@
+SAMPLE INPUT:
+Enter length and number of relatives separated by space (1 to 100000): 10 3
+Enter the scarf pattern as space-separated numbers: 2 1 3 4 3 4 5 4 2 1
+Enter relative 1 range (first and last color index separated by space): 1 4
+Enter relative 2 range (first and last color index separated by space): 3 5
+Enter relative 3 range (first and last color index separated by space): 2 1
+
+SAMPLE OUTPUT:
+Maximum length of scarf section: 10
+
+STEPS TO WRITE THE CODE:
+1. prompting the user to enter the scarf length and the number of relatives separated by a space.
+2. Split the input and assign the first item to n as the length of the scarf and the second item to m as the number of relatives.
+3. Prompt the user to enter the scarf pattern as space-separated numbers.
+4. Convert each item in the scarf pattern from a string to an integer using a for loop.
+5. initiate two empty dictionaries named leftmost_index and rightmost_index to store the first and last occurrences of each color in the scarf.
+6. Loop through the scarf using a for loop from 0 to n.
+7. For each index, get the color at that position.
+8. If the color is not already in leftmost_index, set both leftmost_index[color] and rightmost_index[color] to the current index.
+9. If the color already exists in leftmost_index, update only rightmost_index[color] to the current index.
+10. After this loop, initialize a variable max_length to 0 to keep track of the maximum scarf segment length found.
+11. Loop m times to process each relative's input.
+12. For each iteration, prompt the user to enter two numbers representing the starting and ending colors for the relative's desired scarf segment.
+13. Convert both values to integers and assign them to first and last.
+14. Check if both first and last exist in leftmost_index.
+15. If both colors are found, calculate the segment length as rightmost_index[last] - leftmost_index[first] + 1.
+16. If this length is greater than the current value of max_length, update max_length with the new length.
+17. After the loop is completed, print the value of max_length as the maximum scarf length that satisfies any relative’s requirement.

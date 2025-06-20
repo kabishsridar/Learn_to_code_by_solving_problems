@@ -9,13 +9,13 @@ min_val = min(readings) # finding minimum and maximum
 max_val = max(readings)
 
 min_index = 0
-for i in range(len(readings)): # finding index
-    if readings[i] < readings[min_index]:
+for index in range(len(readings)): # finding index
+    if readings[index] < readings[min_index]:
         min_index = i
 
 max_index = 0
-for i in range(len(readings)):
-    if readings[i] > readings[max_index]:
+for index in range(len(readings)):
+    if readings[index] > readings[max_index]:
         max_index = i
 
 if min_index < max_index:

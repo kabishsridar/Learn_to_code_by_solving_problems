@@ -1,0 +1,51 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor",
+  "elements": [
+    {
+      "id": "JucsQF5R71fL5SRSvnYGB",
+      "type": "text",
+      "x": 277.5000305175781,
+      "y": 179.1666717529297,
+      "width": 441.399658203125,
+      "height": 50,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a0",
+      "roundness": null,
+      "seed": 1253519336,
+      "version": 117,
+      "versionNonce": 2106225128,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1750417412803,
+      "link": null,
+      "locked": false,
+      "text": "first line N (number of digits)\nsecond line - the N digits seperated by space",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "first line N (number of digits)\nsecond line - the N digits seperated by space",
+      "autoResize": true,
+      "lineHeight": 1.25
+    }
+  ],
+  "appState": {
+    "gridSize": 20,
+    "gridStep": 5,
+    "gridModeEnabled": false,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}
