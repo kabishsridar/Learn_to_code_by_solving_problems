@@ -11,7 +11,7 @@
       "width": 456.328125,
       "height": 445.83333587646484,
       "angle": 0,
-      "strokeColor": "#1e1e1e",
+      "strokeColor": "#1971c2",
       "backgroundColor": "transparent",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -25,11 +25,11 @@
         "type": 2
       },
       "seed": 15466381,
-      "version": 118,
-      "versionNonce": 43616493,
+      "version": 119,
+      "versionNonce": 2060690373,
       "isDeleted": false,
-      "boundElements": null,
-      "updated": 1750349100017,
+      "boundElements": [],
+      "updated": 1750479978275,
       "link": null,
       "locked": false
     },
@@ -42,7 +42,7 @@
       "height": 158.33332824707028,
       "angle": 0,
       "strokeColor": "#1e1e1e",
-      "backgroundColor": "transparent",
+      "backgroundColor": "#a5d8ff",
       "fillStyle": "solid",
       "strokeWidth": 2,
       "strokeStyle": "solid",
@@ -55,8 +55,8 @@
         "type": 2
       },
       "seed": 373590061,
-      "version": 139,
-      "versionNonce": 383620813,
+      "version": 140,
+      "versionNonce": 1167678283,
       "isDeleted": false,
       "boundElements": [
         {
@@ -64,7 +64,7 @@
           "id": "C3SK1kctL9OkajBvqLNXI"
         }
       ],
-      "updated": 1750349038319,
+      "updated": 1750479968475,
       "link": null,
       "locked": false
     },
@@ -91,7 +91,7 @@
       "version": 89,
       "versionNonce": 167458093,
       "isDeleted": false,
-      "boundElements": null,
+      "boundElements": [],
       "updated": 1750349038319,
       "link": null,
       "locked": false,
@@ -114,7 +114,7 @@
       "height": 90.83332824707028,
       "angle": 0,
       "strokeColor": "#1e1e1e",
-      "backgroundColor": "transparent",
+      "backgroundColor": "#ffec99",
       "fillStyle": "solid",
       "strokeWidth": 2,
       "strokeStyle": "solid",
@@ -127,8 +127,8 @@
         "type": 2
       },
       "seed": 606049325,
-      "version": 143,
-      "versionNonce": 617921325,
+      "version": 144,
+      "versionNonce": 1740336709,
       "isDeleted": false,
       "boundElements": [
         {
@@ -136,7 +136,7 @@
           "id": "SqMfAlb3alohALvwymdLV"
         }
       ],
-      "updated": 1750349041369,
+      "updated": 1750479970691,
       "link": null,
       "locked": false
     },
@@ -163,7 +163,7 @@
       "version": 62,
       "versionNonce": 709807501,
       "isDeleted": false,
-      "boundElements": null,
+      "boundElements": [],
       "updated": 1750349041369,
       "link": null,
       "locked": false,
@@ -186,7 +186,7 @@
       "height": 49,
       "angle": 0,
       "strokeColor": "#1e1e1e",
-      "backgroundColor": "transparent",
+      "backgroundColor": "#b2f2bb",
       "fillStyle": "solid",
       "strokeWidth": 2,
       "strokeStyle": "solid",
@@ -199,8 +199,8 @@
         "type": 2
       },
       "seed": 493225805,
-      "version": 244,
-      "versionNonce": 1980570413,
+      "version": 245,
+      "versionNonce": 1095400235,
       "isDeleted": false,
       "boundElements": [
         {
@@ -208,7 +208,7 @@
           "id": "ZLFr9ESdpz6zCWaxRJF9F"
         }
       ],
-      "updated": 1750349092584,
+      "updated": 1750479973315,
       "link": null,
       "locked": false
     },
@@ -235,7 +235,7 @@
       "version": 148,
       "versionNonce": 1971006861,
       "isDeleted": false,
-      "boundElements": null,
+      "boundElements": [],
       "updated": 1750349092584,
       "link": null,
       "locked": false,
@@ -274,7 +274,7 @@
       "version": 43,
       "versionNonce": 944114211,
       "isDeleted": false,
-      "boundElements": null,
+      "boundElements": [],
       "updated": 1750349114768,
       "link": null,
       "locked": false,
@@ -319,7 +319,7 @@
       "version": 86,
       "versionNonce": 1850574499,
       "isDeleted": false,
-      "boundElements": null,
+      "boundElements": [],
       "updated": 1750349109601,
       "link": null,
       "locked": false,
@@ -362,7 +362,7 @@
       "version": 108,
       "versionNonce": 1892201827,
       "isDeleted": false,
-      "boundElements": null,
+      "boundElements": [],
       "updated": 1750349101801,
       "link": null,
       "locked": false,
