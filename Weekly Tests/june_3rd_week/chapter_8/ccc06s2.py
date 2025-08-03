@@ -12,7 +12,10 @@ result = "" # initiate result as an empty string
 # print(mapping.keys())
 
 for letter in cipher_text: # loop through each letters in cipher text
-    if letter in mapping: # if the letter is present in the dictionary, then get the value for the key and then, append to result
+    if letter in mapping: 
+    # if the letter is present in the dictionary, 
+    # then get the value for the key and then,
+    # append to result
         result += mapping[letter]
     else: # if it is not found, add a . to the result
         result += "."
